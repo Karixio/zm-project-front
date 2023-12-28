@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {NgOptimizedImage} from "@angular/common";
+import {SeparatorComponent} from "../shared/separator/separator.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    SeparatorComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
