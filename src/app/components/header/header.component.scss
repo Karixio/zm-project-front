@@ -22,10 +22,13 @@
     display: flex;
     align-items: center;
     a{
+      color: #4A4E69;
       font-size: 16px;
       letter-spacing: 1px;
+      font-weight: bold;
+      text-transform: uppercase;
       margin: 0 5px;
-      padding: 10px 30px;
+      padding: 10px 20px;
       text-decoration: none;
     }
     .socials {
@@ -35,6 +38,10 @@
     .search {
       padding: 10px 10px;
       margin-left: 10px;
+    }
+    & > * {
+      position: relative;
+      top: 40px;
     }
   }
 }

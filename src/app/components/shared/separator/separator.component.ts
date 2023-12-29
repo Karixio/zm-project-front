@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, HostBinding, Input} from '@angular/core';
 import {NgStyle} from "@angular/common";
 
 @Component({
@@ -11,15 +11,9 @@ import {NgStyle} from "@angular/common";
   styleUrl: './separator.component.scss'
 })
 export class SeparatorComponent {
-  @Input() separatorWidth = 1;
-  @Input() separatorHeight = 40;
-  @Input() separatorSpacing = 5;
-  @Input() separatorBackground = 'black'
-
-  separatorStyles = {
-    width: this.separatorWidth + "px",
-    height: this.separatorHeight + "px",
-    margin: "0 " + this.separatorSpacing + "px",
-    backgroundColor: this.separatorBackground
-  }
+  @HostBinding('style.width') @Input() separatorWidth = "1px";
+  @HostBinding('style.height') @Input() separatorHeight = "40px";
+  @HostBinding('style.margin') @Input() separatorMargin = "0 5px";
+  @HostBinding('style.backgroundColor') @Input() separatorBackground = '#4A4E69'
+  @HostBinding('style.display') @Input() separatorDisplay = 'block'
 }
